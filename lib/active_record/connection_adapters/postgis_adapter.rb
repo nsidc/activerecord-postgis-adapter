@@ -62,9 +62,7 @@ end
 require 'active_record'
 require 'rgeo/active_record'
 
-if defined?(::RUBY_ENGINE) && ::RUBY_ENGINE == 'jruby'
-  require 'active_record/connection_adapters/postgis_adapter/jdbc_connection'
-end
+require 'active_record/connection_adapters/postgresql_adapter' unless defined?(::RUBY_ENGINE) && ::RUBY_ENGINE == 'jruby'
 
 case ::ActiveRecord::VERSION::MAJOR
 when 3

@@ -63,7 +63,7 @@ require 'active_record'
 require 'rgeo/active_record'
 
 if defined?(::RUBY_ENGINE) && ::RUBY_ENGINE == 'jruby'
-  require 'activerecord-jdbcpostgresql-adapter'
+  require 'active_record/connection_adapters/jdbcpostgresql_adapter'
 else
   require 'active_record/connection_adapters/postgresql_adapter'
 end
